@@ -1,0 +1,15 @@
+.Form {
+    text-align: center;
+    margin: 50px;
+    padding: 10px;
+    width: 600px;
+    border: 1px groove black;
+    border-radius: 10px;
+    background: #b3e1ee;
+    color: white;
+}
+
+.Button input{
+    background-color:#4d4d52;
+    color: cornsilk;
+}

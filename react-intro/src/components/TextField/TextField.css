@@ -1,0 +1,17 @@
+.InputGroup {
+    margin-bottom: 20px;
+}
+
+.InputGroup input {
+    background-color: #EFEFFF;
+    margin-left: 10px;
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+}
+
+.InputGroup .Error {
+    color: red;
+    margin-top: 5px;
+    margin-bottom: -10px ;
+}
