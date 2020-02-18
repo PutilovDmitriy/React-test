@@ -12,6 +12,8 @@ class SimpleForm extends React.Component {
       loginError: "",
       password: "",
       EntranceError: "",
+      link: "/auth",
+      authentic: 0,
     };
 
     // Состояние логина
@@ -44,22 +46,34 @@ class SimpleForm extends React.Component {
   });
 
     // Проверка данных
-  onClickButton = ()  => {      
-    const { login, password, logins, passwords } = this.state;
+    onClickButton = () => {
+      if (this.authentic === 1) {
+      const EntranceError = "";
+      return  this.setState({ EntranceError})
+      }
+      else {
+      const EntranceError = "Неверный логин или пароль";
+      return this.setState({ EntranceError });
+      }
+    };
+
+    onMouseOverButton = ()  => {      
+    const { login, password, logins, passwords} = this.state;
     const L = logins.indexOf(login);
     const P = passwords.indexOf(password);
     if (L === P && L !== -1 && P !== -1)  {
-      const EntranceError = "";
-      return this.setState({ EntranceError });
+      const link = "/logined";
+      const authentic = 1;
+      return  this.setState({link, authentic })
     }
     else {
-      const EntranceError = "Неверный логин или пароль";
-      return this.setState({ EntranceError });      
+      const authentic = -1;
+      return  this.setState({authentic })
     }       
   };
 
   render() {
-    const {loginError, EntranceError} = this.state;
+    const {loginError, EntranceError, link} = this.state;
 
     return (
       <div className="Form">
@@ -75,11 +89,13 @@ class SimpleForm extends React.Component {
                    type="password"
                    placeholder="Пароль"
                    onChange={this.onPasswordChange}
-                   onBlur={this.onPasswordBlur} />
+                   onBlur={this.onPasswordBlur} />    
         <Greetings className="Entrance"
                    value="Sign in"
-                   onClick={this.onClickButton}
-                   error={EntranceError}                            
+                   onClick={this.onClickButton}                   
+                   onMouseOver={this.onMouseOverButton}
+                   error={EntranceError}
+                   link={link}                        
         />
       </div>   
     );
