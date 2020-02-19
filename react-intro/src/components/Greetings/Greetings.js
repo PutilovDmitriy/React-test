@@ -1,6 +1,7 @@
 import React from 'react';
 import './Greetings.css'
 import { Link } from 'react-router-dom';
+
 const Greetings = (props) => (
     <div className="Button">
         {props.error && <div className="Error">{props.error}</div>}

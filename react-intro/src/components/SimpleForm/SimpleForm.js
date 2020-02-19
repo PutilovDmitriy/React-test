@@ -12,7 +12,7 @@ class SimpleForm extends React.Component {
       loginError: "",
       password: "",
       EntranceError: "",
-      link: "/auth",
+      link: "/",
       authentic: 0,
     };
 
@@ -56,19 +56,19 @@ class SimpleForm extends React.Component {
       return this.setState({ EntranceError });
       }
     };
-
+    // Проверка данных
     onMouseOverButton = ()  => {      
     const { login, password, logins, passwords} = this.state;
     const L = logins.indexOf(login);
     const P = passwords.indexOf(password);
     if (L === P && L !== -1 && P !== -1)  {
-      const link = "/logined";
+      const link = "/home";
       const authentic = 1;
       return  this.setState({link, authentic })
     }
     else {
       const authentic = -1;
-      return  this.setState({authentic })
+      return  this.setState({ authentic })
     }       
   };
 
