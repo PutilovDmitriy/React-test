@@ -1,9 +1,9 @@
 import React from 'react';
-import './Greetings.css'
+import './ButtonT.css'
 import { Link } from 'react-router-dom';
 
-const Greetings = (props) => (
-    <div className="Button">
+const ButtonT = (props) => (
+    <div className="ButtonT">
         {props.error && <div className="Error">{props.error}</div>}
         <Link to={ props.link } >
         <input type="submit" 
@@ -15,4 +15,4 @@ const Greetings = (props) => (
     </div>
 );
 
-export default Greetings;
+export default ButtonT;

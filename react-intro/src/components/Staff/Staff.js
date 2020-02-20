@@ -1,15 +1,14 @@
 import React from "react";
 // import { Redirect } from "react-router-dom";
 
-class Home extends React.Component{
-        render() {
+const Staff = () => {
         // if (!isAuth) return < Redirect to="/" />
 
         return(
             <div>
-                Home
+                Staff
             </div>
-)}
+)
 };
 
-export default Home;
+export default Staff;

@@ -1,7 +1,8 @@
 import React from "react";
 import './SimpleForm.css';
-import Greetings from '../Greetings/Greetings';
+import ButtonT from '../ButtonT/ButtonT';
 import TextField from "../TextField/TextField";
+
 
 class SimpleForm extends React.Component {
 
@@ -12,7 +13,7 @@ class SimpleForm extends React.Component {
       loginError: "",
       password: "",
       EntranceError: "",
-      link: "/",
+      link: "/auth",
       authentic: 0,
     };
 
@@ -62,7 +63,7 @@ class SimpleForm extends React.Component {
     const L = logins.indexOf(login);
     const P = passwords.indexOf(password);
     if (L === P && L !== -1 && P !== -1)  {
-      const link = "/home";
+      const link = "/";
       const authentic = 1;
       return  this.setState({link, authentic })
     }
@@ -90,7 +91,7 @@ class SimpleForm extends React.Component {
                    placeholder="Пароль"
                    onChange={this.onPasswordChange}
                    onBlur={this.onPasswordBlur} />    
-        <Greetings className="Entrance"
+        <ButtonT className="Entrance"
                    value="Sign in"
                    onClick={this.onClickButton}                   
                    onMouseOver={this.onMouseOverButton}

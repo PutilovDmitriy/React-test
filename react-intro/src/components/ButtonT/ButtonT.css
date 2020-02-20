@@ -1,4 +1,4 @@
-.Button input{
+.ButtonT input{
     border : 0 none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: oblique;
@@ -6,7 +6,7 @@
     width: 120px;
 }
 
-.Button .Error {
+.ButtonT .Error {
     color: red;
     margin-top: -10px;
     margin-bottom: 5px ;

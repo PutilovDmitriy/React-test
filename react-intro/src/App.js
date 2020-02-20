@@ -1,16 +1,15 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import SimpleForm from './components/SimpleForm/SimpleForm';
-import Home from './components/Home/Home';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import './App.css';
+import SimpleForm from './components/SimpleForm/SimpleForm';
+import Header from './components/Header/Header';
 
 const App = () => (
-    <div>
+    <div className='App'>
     <Router>
       <Switch>
-        <Route exact path='/' component={SimpleForm}/>
-        <Route path='/home' render = { () => <Home/>}
-        />
+        <Route exact path='/auth' component={SimpleForm}/>
+        <Route path='/' component={Header}/>
       </Switch>
     </Router>
     </div>
