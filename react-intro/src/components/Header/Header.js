@@ -36,7 +36,7 @@ class Header extends React.Component {
                 <Route path="/staff">
                     <Staff />
                 </Route>
-            </Switch> 
+            </Switch>
         </Router>
         </div>
 )}};

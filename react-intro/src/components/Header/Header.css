@@ -3,7 +3,8 @@
     display: inline;
 }
 .Header ul {
-    margin-top: -30px;
+    height: 60px;
+    margin-top: -60px;
 }
 .Header li {
     display: inline;
