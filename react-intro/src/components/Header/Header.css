@@ -1,9 +1,15 @@
+.Header {
+    text-align: center;
+    display: inline;
+}
+.Header ul {
+    margin-top: -30px;
+}
 .Header li {
     display: inline;
     list-style: none;
     font-size: 40px;
     padding: 5px 10px;
-
 }
 .Header a {
     color: black;

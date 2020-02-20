@@ -1,0 +1,64 @@
+.Service h1 {
+    text-align: center;
+    color: lightseagreen;
+}
+
+.FormService {    
+    text-align: center;
+    margin: 5% auto auto auto;
+    padding-top: 10px;
+    width: 50%;
+    border: 1px groove black;
+    border-radius: 10px;
+    background-color: maroon;
+    color: white;
+}
+
+@media (max-width: 600px) {
+  .FormService {
+       margin: 10% auto auto auto;
+       width: 90%;
+    }
+}
+
+.InputGroup {
+    margin-bottom: 10px;
+}
+
+.Checkbox {
+     padding: 0;
+}
+.Checkbox .InputGroup{
+    width: 20%;
+    display: inline-block;
+    margin: 0;
+}
+@media (max-width: 600px) {
+    .InputGroup input {
+        height: 15px;
+        font-size: 10px;
+    }
+
+    .InputGroup {
+        margin-bottom: 10px;
+    }
+    .InputGroup .Name {
+        font-size: 12px;
+        padding-bottom: 0px;
+    }
+    .Checkbox {
+        padding: 0;
+    }
+
+    .Checkbox .InputGroup{
+        width: 20%;
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+.ButtonT input {
+    margin-top: 0px;
+    width: 40%;
+    height: 30px;
+}

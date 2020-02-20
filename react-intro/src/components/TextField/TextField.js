@@ -1,15 +1,19 @@
 import React from 'react';
 import './TextField.css';
 
-const TextField = (props) => (
+
+const TextField = (props) => (    
+
     <div className="InputGroup">
             <label>
-                <input 
+                {props.name && <p className="Name">{props.name}</p>}
+                <input
+                name={props.name}
                 placeholder={props.placeholder}
                 type={props.type}
-                name={props.name}
                 onChange={props.onChange}
                 onBlur={props.onBlur}
+                min={props.min}
                 />
                 {props.error && <div className="Error">{props.error}</div>}
             </label>

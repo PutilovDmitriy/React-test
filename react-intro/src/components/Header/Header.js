@@ -1,27 +1,34 @@
 import React from "react";
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './Header.css';
-import Home from '../Home/Home';
+import OneService from '../OneService/OneService';
 import Car from '../Car/Car';
 import Staff from '../Staff/Staff';
+import ListMenu from "./ListMenu/ListMenu";
+import ButtonM from "../Buttons/ButtonM/ButtonM";
 
 // import { Redirect } from "react-router-dom";
 
 class Header extends React.Component {
-        render () {
+    state = {
+        showModal: false
+    }
+     
+    handleModal = () => {
+        this.setState({showModal: !this.state.showModal});
+    }
+
+    render () {
         return(
         <div>
         <Router>
          <header className='Header'>
-            <ul>
-                <li><Link to='/home'>Home</Link></li>
-                <li><Link to='/car'>Car</Link></li>
-                <li><Link to='/staff'>Staff</Link></li>
-            </ul>
+         <ButtonM onClick={this.handleModal}>HI</ButtonM>
+         { this.state.showModal && <ListMenu/> }
          </header>
             <Switch>
-                <Route exact path="/home">
-                    <Home/>
+                <Route path="/service">
+                    <OneService/>
                 </Route>
                 <Route path="/car">
                     <Car />
