@@ -3,11 +3,13 @@ import './ButtonM.css'
 
 const ButtonM = (props) => (
     <div className="ButtonM">
-        <input type="submit" 
+        <button className={props.class} 
+               type="submit" 
                value={props.value}
                onClick={props.onClick}
                onMouseOver={props.onMouseOver}
-        />    
+        >-_-
+        </button> 
     </div>
 );
 
